@@ -1,0 +1,54 @@
+{# Set locale for date #}
+{% set date_locale = macros_translate::translate(key="date_locale", default="en_GB", language_strings=language_strings) %}
+
+
+<div class="archive">
+  <ul class="list-with-title">
+   {# Collect all pages and subsections #}
+   {% set_global journeys = [] %}
+   {% for journey_path in show_journeys %}
+     {% set_global journeys = journeys | concat(with=get_section(path=journey_path)) %}
+   {% endfor %}
+   {% for journey_page in show_pages %}
+     {% set_global journeys = journeys | concat(with=journey_page) %}
+   {% endfor %}
+
+
+   {% for year, yearly_journeys in journeys | group_by(attribute="extra.year") %}
+    <li>
+      <h2 class="listing-title">{{ year }}</h2>
+  
+      <ul class="listing">
+      {% for journey in yearly_journeys | sort(attribute="extra.date") | reverse %}
+        <li class="listing-item">
+					<div class="post-time">
+							<span class="date">
+                  {% if journey.extra.date %}
+                  {# This is probably a section #}
+                  {% set date_format = "%b" %}
+                  {% else %}
+                  {% set date_format = "%b %d" %}
+                  {% endif %}
+									<h3>{{ journey.date | default(value=journey.extra.date) | date(format=date_format, locale=date_locale) }}</h3>
+							</span>
+					</div>
+			    <div>
+          <h3><a href="{{ journey.permalink }}" title="{{ journey.title }}">{{ journey.title }}</a></h3>
+          {% if journey.description %}
+            <p>{{ journey.description }}</p>
+          {% endif %}
+
+				    {% if journey.extra.local_image %}
+                {% set processed_image = resize_image(path=journey.extra.local_image, width=2000, op="fit_width", format="webp", quality=95) %}
+								<a href="{{ journey.permalink }}" title="{{ journey.title }}" style="margin-top: var(--paragraph-spacing);" class="no-hover-padding">
+                  <img alt="{{ journey.title }}" src="{{ processed_image.url }}" style="max-width: 5rem;">
+                </a>
+             {% endif %}
+			    </div>
+			  </li>
+      {% endfor %}
+       </ul>
+	   </li>
+    {% endfor %}
+  </ul>
+</div>
