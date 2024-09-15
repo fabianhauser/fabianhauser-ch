@@ -1,6 +1,6 @@
 +++
 title = "NixOS"
-description = "Contributor and package maintainer"
+description = "Package Maintainer and active community member."
 weight = 1
 
 [extra]

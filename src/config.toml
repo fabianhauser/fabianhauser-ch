@@ -1,5 +1,6 @@
 title = "FabianHauser.ch"
 base_url = "https://fabianhauser.ch"
+default_language = "en"
 
 # Build options
 compile_sass = false
@@ -24,6 +25,7 @@ taxonomies = [
   {name = "categories", paginate_by = 5},  # 5 items per page for a term
 ]
 
+
 [link_checker]
 external_level = "warn"
 
@@ -44,3 +46,11 @@ menu = [
     { name = "projects", url = "projects", trailing_slash = true },
 ]
 
+feed_icon = false
+
+socials = [
+  { name = "email", url = "mailto:fabian@fh2.ch", icon = "email" },
+  { name = "photo", url = "https://portfolio.pixelfed.social/fabianhauser", icon = "photo" },
+  { name = "github", url = "https://github.com/fabianhauser/", icon = "github" },
+  { name = "gpg", url = "https://keys.openpgp.org/search?q=fabian%40fh2.ch", icon = "gpg" },
+]
