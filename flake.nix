@@ -73,23 +73,26 @@
         };
       };
 
-      apps.${system} = {
-        default =
-          let
-            zola = pkgs.writeShellScriptBin "zola" ''
-              cd src
-              ${preparePhase}
-              ${pkgs.zola}/bin/zola --root . ''${@}
-            '';
-          in
-          {
+      apps.${system} =
+        let
+          zola = pkgs.writeShellScriptBin "zola" ''
+            cd src
+            ${preparePhase}
+            ${pkgs.zola}/bin/zola --root . ''${@}
+          '';
+          deploy = pkgs.writeShellScriptBin "deploy" ''
+            ${pkgs.deploy-rs}/bin/deploy --remote-build ''${@}
+          '';
+        in
+        {
+          default = {
             type = "app";
             program = "${zola}/bin/zola";
           };
-        deploy = {
-          type = "app";
-          program = "${pkgs.deploy-rs}/bin/deploy";
+          deploy = {
+            type = "app";
+            program = "${deploy}/bin/deploy";
+          };
         };
-      };
     };
 }
