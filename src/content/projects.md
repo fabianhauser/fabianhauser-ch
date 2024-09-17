@@ -29,7 +29,7 @@ Feasibility study and implementation prototype of
 the (then ongoing) standardization process.  
 Joint bachelor thesis with [Raphael Zimmermann](https://www.raphael.li).
 
-**[open\\HSR](https://openhsr.ch/)**: **Co-founder and former board
+**[open\\OST](https://openost.ch/)**: **Co-founder and former board
 member**  
 Association to advance the open source community and usage of
 alternative operation systems (particularly Linux) at HSR University
