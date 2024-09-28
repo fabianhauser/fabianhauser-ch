@@ -8,7 +8,7 @@ header = {title = "Hi! I'm Fabian.", img = "img/profile.webp" }
 +++
 
 I’m a passionate traveller, mountaineer, [photographer](https://portfolio.pixelfed.social/fabianhauser) and lifelong learner.
-Currently, I'm taking a sabbatical to travel eastern Asia 🌏
+Currently, I'm taking a sabbatical to travel southeast Asia 🌏
 
 Professionally, I've been active in computer science and teaching with a focus on software engineering, distributed systems and [open source software](./projects).
 
