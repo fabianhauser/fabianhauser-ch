@@ -12,7 +12,7 @@ A selection of projects and associations I am (or was) involved with.
 
 {% references() %}
 
-**_qo.is_: co-founder, board member and infrastructure lead**  
+[**qo.is**](https://git.qo.is/qo.is/infrastructure): **co-founder, board member and infrastructure lead**  
 Association providing decentral, privacy-first ICT infrastructure to its members. Based on NixOS.
 
 [**NixOS**](https://nixos.org/)  
