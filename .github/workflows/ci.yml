@@ -10,7 +10,7 @@ defaults:
 
 jobs:
   build:
-    container: nixpkgs/nix-flakes:nixos-24.05
+    runs-on: nix
     steps:
       - name: Initialize CI
         uses: https://git.qo.is/qo.is/actions-nix-init@main
