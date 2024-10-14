@@ -54,3 +54,8 @@ socials = [
   { name = "github", url = "https://github.com/fabianhauser/", icon = "github" },
   { name = "gpg", url = "https://keys.openpgp.org/search?q=fabian%40fh2.ch", icon = "gpg" },
 ]
+
+stylesheets = [
+  "profile.css"
+]
+
