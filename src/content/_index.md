@@ -12,7 +12,7 @@ Currently, I'm taking a sabbatical to travel southeast Asia 🌏
 
 Professionally, I've been active in computer science and teaching with a focus on software engineering, distributed systems and [open source software](./projects).
 
-Before, I was bringing secure and privacy first communication to the general public at [Threema](https://threema.ch/)
+Before my sabbatical, I was bringing secure and privacy first communication to the general public at [Threema](https://threema.ch/)
 and giving lectures on Software Engineering at [OST – Fachhochschule Ostschweiz](https://www.ost.ch/).  
 &nbsp;
 
