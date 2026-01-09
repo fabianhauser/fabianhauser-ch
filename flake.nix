@@ -69,7 +69,7 @@
         profiles.${domain} = {
           sshUser = "nginx-${domain}";
           path = deployPkgs.deploy-rs.lib.activate.noop self.packages.${system}.default;
-          profilePath = "/var/lib/nginx-${domain}/root";
+          profilePath = "/nix/var/nix/profiles/per-user/nginx-${domain}/profile/webroot";
         };
       };
 
