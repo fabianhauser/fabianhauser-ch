@@ -24,7 +24,7 @@
       deployPkgs = import nixpkgs-unstable {
         inherit system;
         overlays = [
-          deploy-rs.overlay
+          deploy-rs.overlays.default
           (self: super: {
             deploy-rs = {
               inherit (pkgs) deploy-rs;
@@ -40,7 +40,7 @@
 
     in
     {
-      formatter.${system} = pkgs.nixfmt-rfc-style;
+      formatter.${system} = pkgs.nixfmt-tree;
       checks.${system}.default = pkgs.stdenv.mkDerivation {
         inherit version;
         name = "${domain}-${version}";
@@ -66,11 +66,15 @@
 
       deploy.nodes.lindberg-webapps = {
         hostname = "lindberg-webapps.backplane.net.qo.is";
-        profiles.${domain} = {
-          sshUser = "nginx-${domain}";
-          path = deployPkgs.deploy-rs.lib.activate.noop self.packages.${system}.default;
-          profilePath = "/nix/var/nix/profiles/per-user/nginx-${domain}/profile/webroot";
-        };
+        profiles.${domain} =
+          let
+            sshUser = "nginx-${domain}";
+          in
+          {
+            inherit sshUser;
+            path = deployPkgs.deploy-rs.lib.activate.noop self.packages.${system}.default;
+            profilePath = "/var/lib/${sshUser}/.local/state/nix/profiles/webroot";
+          };
       };
 
       apps.${system} =
