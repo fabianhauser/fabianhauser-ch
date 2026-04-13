@@ -7,11 +7,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1766051518,
-        "narHash": "sha256-znKOwPXQnt3o7lDb3hdf19oDo0BLP4MfBOYiWkEHoik=",
+        "lastModified": 1770019181,
+        "narHash": "sha256-hwsYgDnby50JNVpTRYlF3UR/Rrpt01OrxVuryF40CFY=",
         "owner": "serokell",
         "repo": "deploy-rs",
-        "rev": "d5eff7f948535b9c723d60cd8239f8f11ddc90fa",
+        "rev": "77c906c0ba56aabdbc72041bf9111b565cdd6171",
         "type": "github"
       },
       "original": {
@@ -54,11 +54,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1767767207,
-        "narHash": "sha256-Mj3d3PfwltLmukFal5i3fFt27L6NiKXdBezC1EBuZs4=",
+        "lastModified": 1775710090,
+        "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5912c1772a44e31bf1c63c0390b90501e5026886",
+        "rev": "4c1018dae018162ec878d42fec712642d214fdfa",
         "type": "github"
       },
       "original": {
@@ -93,11 +93,11 @@
     "tabi": {
       "flake": false,
       "locked": {
-        "lastModified": 1767453491,
-        "narHash": "sha256-ykFEiDFJU9irHq25458NrRLiPnMVl/vTCLHXRsR4R1A=",
+        "lastModified": 1775487508,
+        "narHash": "sha256-NLIAswi8NHGeIjSPFJIM6zC6kh58iUUqljoVUcKgNZM=",
         "owner": "welpo",
         "repo": "tabi",
-        "rev": "689934edfe233cfd976318de1f484d34d87cfa47",
+        "rev": "874a1e651601b66a25cbd6e0e308ce7906a67db6",
         "type": "github"
       },
       "original": {
